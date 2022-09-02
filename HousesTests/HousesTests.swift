@@ -8,7 +8,7 @@ final class HousesTests: XCTestCase {
         "url": "https://anapioficeandfire.com/api/houses/53",
         "name": "House Burley",
         "region": "The North",
-        "coatOfArms": "White, upon a pile azure a knife white",
+        "coatOfArms": "",
         "words": "",
         "titles": [
           ""
@@ -33,10 +33,10 @@ final class HousesTests: XCTestCase {
       }
     """.data(using: .utf8)!
     let expectedHouse = House(
-      url: URL(string: "https://anapioficeandfire.com/api/houses/53"),
+      url: URL(string: "https://anapioficeandfire.com/api/houses/53")!,
       name: "House Burley",
       region: "The North",
-      coatOfArms: "White, upon a pile azure a knife white",
+      coatOfArms: nil,
       words: nil,
       titles: [],
       seats: [],

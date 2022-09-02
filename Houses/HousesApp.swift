@@ -4,7 +4,9 @@ import SwiftUI
 struct HousesApp: App {
   var body: some Scene {
     WindowGroup {
-      HouseList()
+      NavigationView {
+        HouseList()
+      }
     }
   }
 }

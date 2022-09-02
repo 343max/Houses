@@ -17,6 +17,7 @@
 		50E6900D28C204F7008DEFDD /* houses.json in Resources */ = {isa = PBXBuildFile; fileRef = 50E6900C28C204F7008DEFDD /* houses.json */; };
 		50E6900F28C2083D008DEFDD /* DecodableHouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E6900E28C2083D008DEFDD /* DecodableHouse.swift */; };
 		50E6901328C22FC4008DEFDD /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E6901228C22FC4008DEFDD /* Spinner.swift */; };
+		50E6901728C238A1008DEFDD /* HouseDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E6901628C238A1008DEFDD /* HouseDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		50E6900C28C204F7008DEFDD /* houses.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = houses.json; sourceTree = "<group>"; };
 		50E6900E28C2083D008DEFDD /* DecodableHouse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableHouse.swift; sourceTree = "<group>"; };
 		50E6901228C22FC4008DEFDD /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
+		50E6901628C238A1008DEFDD /* HouseDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				503A197228C1D81E00347101 /* Assets.xcassets */,
 				503A199A28C1D83900347101 /* API */,
 				503A197428C1D81E00347101 /* Preview Content */,
+				50E6901628C238A1008DEFDD /* HouseDetails.swift */,
 			);
 			path = Houses;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				503A199F28C1D83900347101 /* API.swift in Sources */,
 				50E6900B28C20438008DEFDD /* HouseList.swift in Sources */,
 				50E6901328C22FC4008DEFDD /* Spinner.swift in Sources */,
+				50E6901728C238A1008DEFDD /* HouseDetails.swift in Sources */,
 				503A196F28C1D81D00347101 /* HousesApp.swift in Sources */,
 				50E6900F28C2083D008DEFDD /* DecodableHouse.swift in Sources */,
 			);

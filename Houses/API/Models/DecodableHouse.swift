@@ -41,7 +41,7 @@ extension House: Decodable {
     url = URL(string: dirtyHouse.url)!
     name = dirtyHouse.name
     region = dirtyHouse.region
-    coatOfArms = dirtyHouse.coatOfArms
+    coatOfArms = dirtyHouse.coatOfArms.nonEmpty
     words = dirtyHouse.words == "" ? nil : dirtyHouse.words
     titles = dirtyHouse.titles.nonEmpty
     seats = dirtyHouse.seats.nonEmpty

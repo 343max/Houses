@@ -4,7 +4,7 @@ struct House {
   let url: URL
   let name: String
   let region: String
-  let coatOfArms: String
+  let coatOfArms: String?
   let words: String?
   let titles: [String]
   let seats: [String]

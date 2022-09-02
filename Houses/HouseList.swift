@@ -3,7 +3,7 @@ import SwiftUI
 struct HouseList: View {
   @State private var houses: [House] = []
   @State private var isLoading = false
-  @State private var hasMore = false
+  @State private var hasMore = true
   @State private var page = 0
   
   func load(page: Int) async -> [House] {
@@ -39,8 +39,10 @@ struct HouseList: View {
       List {
         Section {
           ForEach(houses) { house in
-            Button(house.name) {
-              //
+            NavigationLink {
+              HouseDetails(house: house)
+            } label: {
+              Text(house.name)
             }
           }
         } footer: {
@@ -66,6 +68,8 @@ struct HouseList: View {
           await loadFirst()
         }
       })
+      .listStyle(InsetGroupedListStyle())
+      .navigationTitle("Houses")
     }
   }
 }
