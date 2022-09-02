@@ -1,36 +1,59 @@
-//
-//  HousesTests.swift
-//  HousesTests
-//
-//  Created by Max von Webel on 02.09.22.
-//
-
-import XCTest
 @testable import Houses
+import XCTest
 
 final class HousesTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
+  func testParseHouses() {
+    let json = """
+    {
+        "url": "https://anapioficeandfire.com/api/houses/53",
+        "name": "House Burley",
+        "region": "The North",
+        "coatOfArms": "White, upon a pile azure a knife white",
+        "words": "",
+        "titles": [
+          ""
+        ],
+        "seats": [
+          ""
+        ],
+        "currentLord": "",
+        "heir": "",
+        "overlord": "https://anapioficeandfire.com/api/houses/34",
+        "founded": "",
+        "founder": "",
+        "diedOut": "",
+        "ancestralWeapons": [
+          ""
+        ],
+        "cadetBranches": [],
+        "swornMembers": [
+          "https://anapioficeandfire.com/api/characters/162",
+          "https://anapioficeandfire.com/api/characters/392"
+        ]
+      }
+    """.data(using: .utf8)!
+    let expectedHouse = House(
+      url: URL(string: "https://anapioficeandfire.com/api/houses/53"),
+      name: "House Burley",
+      region: "The North",
+      coatOfArms: "White, upon a pile azure a knife white",
+      words: nil,
+      titles: [],
+      seats: [],
+      currentLord: nil,
+      heir: nil,
+      overlord: URL(string: "https://anapioficeandfire.com/api/houses/34"),
+      founded: nil,
+      founder: nil,
+      diedOut: nil,
+      ancestralWeapons: [],
+      cadetBranches: [],
+      swornMembers: [
+        URL(string: "https://anapioficeandfire.com/api/characters/162")!,
+        URL(string: "https://anapioficeandfire.com/api/characters/392")!,
+      ]
+    )
+    let house = try! JSONDecoder().decode(House.self, from: json)
+    XCTAssertEqual(house, expectedHouse)
+  }
 }
