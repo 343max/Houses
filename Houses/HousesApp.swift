@@ -4,7 +4,7 @@ import SwiftUI
 struct HousesApp: App {
   var body: some Scene {
     WindowGroup {
-      HouseLoadingList()
+      HouseList()
     }
   }
 }
