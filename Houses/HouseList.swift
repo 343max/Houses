@@ -48,7 +48,7 @@ struct HouseList: View {
         } footer: {
           if (hasMore) {
             VStack(alignment: .center) {
-              Spinner(spinning: .constant(true))
+              ProgressView()
             }
             .frame(maxWidth: .infinity)
             .padding(EdgeInsets(top: 60, leading: 0, bottom: 60, trailing: 0))
